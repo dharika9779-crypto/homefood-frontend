@@ -6,8 +6,8 @@ import { useAuth } from '../context/AuthContext'
 const steps = ['Pickup', 'On the way', 'Delivered']
 
 const fakeOrders = [
-  { id: 'order_fake1', cook_name: 'Sunita Tai', pickup_location: 'Koregaon Park, Pune', student_name: 'Riya Sharma', delivery_address: 'Shivaji Nagar PG, Room 12', delivery_earnings: 30 },
-  { id: 'order_fake2', cook_name: 'Priya Didi', pickup_location: 'Viman Nagar, Pune', student_name: 'Amit Verma', delivery_address: 'Kalyani Nagar PG, Room 5', delivery_earnings: 25 },
+  { id: 'order_fake1', cook_name: 'Sunita Tai', pickup_location: 'Kalamboli', student_name: 'Riya Sharma', delivery_address: 'Shivaji Nagar PG, Room 12', delivery_earnings: 30 },
+  { id: 'order_fake2', cook_name: 'Priya Didi', pickup_location: 'Kalamboli', student_name: 'Amit Verma', delivery_address: 'Kalyani Nagar PG, Room 5', delivery_earnings: 25 },
 ]
 
 export default function DeliveryDashboard() {
