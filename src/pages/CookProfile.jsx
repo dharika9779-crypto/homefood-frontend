@@ -6,7 +6,7 @@ import { useCart } from '../context/CartContext'
 const TABS = ['Menu', 'Plans', 'Reviews', 'About']
 
 const fakeCook = {
-  id: 'cook_1', name: 'Sunita Tai', kitchen_name: "Sunita Tai's Kitchen", location: 'Koregaon Park, Pune',
+  id: 'cook_1', name: 'Sunita Tai', kitchen_name: "Sunita Tai's Kitchen", location: 'Kalamboli',
   cuisine_types: ['Maharashtrian', 'Home-style'], food_type: 'veg', rating: 4.9, total_orders: 234,
   trust_score: 92, is_open: true, bio: 'Cooking authentic Maharashtrian food for 10+ years.', cooking_since: '2013',
   ratings_breakdown: { taste: 4.9, hygiene: 4.8, quantity: 4.7 },
