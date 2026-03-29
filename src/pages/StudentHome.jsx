@@ -45,7 +45,7 @@ export default function StudentHome() {
           <h1 style={{ fontFamily: "'Playfair Display',serif", fontSize: 32, fontWeight: 700 }}>
             Good afternoon, {user?.name?.split(' ')[0] || 'there'} 👋
           </h1>
-          <p style={{ color: '#6B6B6B', marginTop: 4 }}>📍 Koregaon Park, Pune · {cooks.length} cooks near you</p>
+          <p style={{ color: '#6B6B6B', marginTop: 4 }}>📍 kalamboli· {cooks.length} cooks near you</p>
         </div>
 
         <div style={{ display: 'flex', gap: 10, overflowX: 'auto', paddingBottom: 8, marginBottom: 32 }}>
