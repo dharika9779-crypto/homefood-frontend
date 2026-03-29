@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: 'http://localhost:8000' })
+const API_BASE = "https://homefood-backend-2.onrender.com";
 
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem('token')
