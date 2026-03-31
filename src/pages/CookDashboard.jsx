@@ -65,16 +65,7 @@ export default function CookDashboard() {
           </button>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, marginBottom: 32 }}>
-          {[['📦', 'Today\'s Orders', stats.today_orders], ['💰', 'Weekly Earnings', `₹${stats.weekly_earnings}`], ['⭐', 'Rating', `${stats.rating}`], ['👥', 'Subscribers', stats.active_subscribers]].map(([icon, label, val]) => (
-            <div key={label} style={{ background: '#fff', borderRadius: 20, border: '1px solid #E8E0D5', padding: 20 }}>
-              <div style={{ fontSize: 28, marginBottom: 8 }}>{icon}</div>
-              <div style={{ fontFamily: "'DM Mono',monospace", fontSize: 24, fontWeight: 700, color: '#E8580A' }}>{val}</div>
-              <div style={{ fontSize: 12, color: '#6B6B6B', marginTop: 4 }}>{label}</div>
-            </div>
-          ))}
-        </div>
-
+        
         <div style={{ background: '#fff', borderRadius: 20, border: '1px solid #E8E0D5', padding: 24, marginBottom: 24 }}>
           <h2 style={{ fontWeight: 700, fontSize: 17, marginBottom: 16 }}>Today's Orders</h2>
           {orders.length === 0 ? <p style={{ color: '#6B6B6B', textAlign: 'center', padding: '24px 0' }}>No active orders right now</p> : (
