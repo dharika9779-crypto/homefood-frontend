@@ -57,15 +57,16 @@ export default function CookDashboard() {
       <div style={{ flex: 1, padding: 32, overflowY: 'auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
           <div>
-            <h1 style={{ fontFamily: "'Playfair Display',serif", fontSize: 28, fontWeight: 700 }}>Namaste 🙏</h1>
+            <h1 style={{ fontFamily: "'Playfair Display',serif", fontSize: 28, fontWeight: 700 }}>Namaste, {cook.name} 🙏</h1>
             <p style={{ color: '#6B6B6B', fontSize: 14, marginTop: 4 }}>Here's your kitchen summary for today</p>
           </div>
           <button onClick={handleToggle} style={{ padding: '10px 24px', borderRadius: 999, border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 14, fontFamily: 'inherit', background: cook.is_open ? '#22C55E' : '#9CA3AF', color: '#fff' }}>
             {cook.is_open ? '● OPEN' : '● CLOSED'}
           </button>
         </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, marginBottom: 32 }}>
-          {[['📦', 'Today\'s Orders', stats.today_orders], ['💰', 'Weekly Earnings',0], ['⭐', 'Rating', 0], ['👥', 'Subscribers', 0].map(([icon, label, val]) => (
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, marginBottom: 32 }}>
+          {[['📦', 'Today\'s Orders', stats.today_orders], ['💰', 'Weekly Earnings', `₹${stats.weekly_earnings}`], ['⭐', 'Rating', `${stats.rating}`], ['👥', 'Subscribers', stats.active_subscribers]].map(([icon, label, val]) => (
             <div key={label} style={{ background: '#fff', borderRadius: 20, border: '1px solid #E8E0D5', padding: 20 }}>
               <div style={{ fontSize: 28, marginBottom: 8 }}>{icon}</div>
               <div style={{ fontFamily: "'DM Mono',monospace", fontSize: 24, fontWeight: 700, color: '#E8580A' }}>{val}</div>
@@ -73,7 +74,7 @@ export default function CookDashboard() {
             </div>
           ))}
         </div>
-        
+
         <div style={{ background: '#fff', borderRadius: 20, border: '1px solid #E8E0D5', padding: 24, marginBottom: 24 }}>
           <h2 style={{ fontWeight: 700, fontSize: 17, marginBottom: 16 }}>Today's Orders</h2>
           {orders.length === 0 ? <p style={{ color: '#6B6B6B', textAlign: 'center', padding: '24px 0' }}>No active orders right now</p> : (
@@ -107,8 +108,13 @@ export default function CookDashboard() {
         </div>
 
         <div style={{ background: '#fff', borderRadius: 20, border: '1px solid #E8E0D5', padding: 24 }}>
-          <h2 style={{ fontWeight: 700, fontSize: 17, marginBottom: 16 }}>Menu Items </h2>
-        <button>  Add+ </button>
+          <h2 style={{ fontWeight: 700, fontSize: 17, marginBottom: 16 }}>Menu Items</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 12 }}>
+            {cook.menu.map((item) => (
+              <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: '1px solid #E8E0D5', borderRadius: 12, padding: '12px 16px' }}>
+                <span style={{ fontSize: 14, fontWeight: 500 }}>{item.name}</span>
+                <span style={{ fontSize: 12, padding: '3px 10px', borderRadius: 999, background: item.available ? '#DCFCE7' : '#F3F4F6', color: item.available ? '#166534' : '#6B7280' }}>
+                  {item.available ? 'On' : 'Off'}
                 </span>
               </div>
             ))}
