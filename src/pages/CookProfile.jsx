@@ -6,25 +6,6 @@ import { useCart } from '../context/CartContext'
 const TABS = ['Menu', 'Plans', 'Reviews', 'About']
 
 const fakeCook = {
-  id: 'cook_1', name: 'Sunita Tai', kitchen_name: "Sunita Tai's Kitchen", location: 'Kalamboli',
-  cuisine_types: ['Maharashtrian', 'Home-style'], food_type: 'veg', rating: 4.9, total_orders: 234,
-  trust_score: 92, is_open: true, bio: 'Cooking authentic Maharashtrian food for 10+ years.', cooking_since: '2013',
-  ratings_breakdown: { taste: 4.9, hygiene: 4.8, quantity: 4.7 },
-  menu: [
-    { id: 'item_1', name: 'Dal Rice', description: 'Fresh dal with steamed rice and pickle', price: 60, food_type: 'veg' },
-    { id: 'item_2', name: 'Sabji Roti', description: 'Seasonal vegetable curry with 3 rotis', price: 55, food_type: 'veg' },
-    { id: 'item_3', name: 'Rajma Chawal', description: 'Classic rajma with basmati rice', price: 70, food_type: 'veg' },
-    { id: 'item_4', name: 'Misal Pav', description: 'Spicy sprouted curry with pav', price: 50, food_type: 'veg' },
-  ],
-  plans: [
-    { id: 'plan_1', name: 'Weekly Plan', meals_per_day: 2, days: 'Mon-Sat', price: 1200, original_price: 1500 },
-    { id: 'plan_2', name: 'Weekly Plan', meals_per_day: 3, days: 'Mon-Sat', price: 1600, original_price: 2000 },
-    { id: 'plan_3', name: 'Monthly Plan', meals_per_day: 2, days: 'Mon-Sat', price: 4000, original_price: 5000 },
-  ],
-  reviews: [
-    { id: 'r1', student_name: 'Riya Sharma', rating: 5, comment: 'Absolutely loved the dal rice! Tastes just like home.', tags: ['Fresh food', 'Hygienic'] },
-    { id: 'r2', student_name: 'Amit Verma', rating: 5, comment: 'Best homemade food in Pune!', tags: ['Great taste', 'Would order again'] },
-  ]
 }
 
 export default function CookProfile() {
