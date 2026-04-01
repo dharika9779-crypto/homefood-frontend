@@ -57,7 +57,7 @@ export default function CookDashboard() {
       <div style={{ flex: 1, padding: 32, overflowY: 'auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
           <div>
-            <h1 style={{ fontFamily: "'Playfair Display',serif", fontSize: 28, fontWeight: 700 }}>Namaste, {cook.name} 🙏</h1>
+            <h1 style={{ fontFamily: "'Playfair Display',serif", fontSize: 28, fontWeight: 700 }}>Namaste 🙏</h1>
             <p style={{ color: '#6B6B6B', fontSize: 14, marginTop: 4 }}>Here's your kitchen summary for today</p>
           </div>
           <button onClick={handleToggle} style={{ padding: '10px 24px', borderRadius: 999, border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 14, fontFamily: 'inherit', background: cook.is_open ? '#22C55E' : '#9CA3AF', color: '#fff' }}>
